@@ -1,0 +1,371 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mer Tarun Accountant | Accounting Services</title>
+<meta name="description" content="Professional accounting, GST, ITR and bookkeeping services by Mer Tarun Accountant.">
+<style>
+:root {
+  --navy: #10243e;
+  --blue: #176b87;
+  --teal: #19a7a0;
+  --light: #f4f8fb;
+  --text: #253449;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: Arial, sans-serif;
+  color: var(--text);
+  line-height: 1.6;
+  background: white;
+}
+a { text-decoration: none; color: inherit; }
+header {
+  background: white;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 2px 15px #10243e12;
+}
+nav {
+  max-width: 1100px;
+  margin: auto;
+  padding: 17px 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.brand {
+  color: var(--navy);
+  font-size: 19px;
+  font-weight: 800;
+  letter-spacing: .5px;
+}
+.brand span { color: var(--teal); }
+.navlinks { display: flex; gap: 25px; font-size: 14px; }
+.navlinks a:hover { color: var(--teal); }
+.hero {
+  background: linear-gradient(120deg, #10243e, #176b87);
+  color: white;
+  padding: 100px 22px;
+}
+.hero-inner {
+  max-width: 1100px;
+  margin: auto;
+}
+.tag {
+  color: #80eee0;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+.hero h1 {
+  font-size: clamp(38px, 7vw, 65px);
+  line-height: 1.12;
+  margin: 20px 0;
+}
+.hero h1 span { color: #70e0d4; }
+.hero p {
+  max-width: 620px;
+  color: #e0edf5;
+  font-size: 17px;
+  margin-bottom: 30px;
+}
+.btn {
+  display: inline-block;
+  background: var(--teal);
+  color: white;
+  padding: 13px 23px;
+  border-radius: 7px;
+  font-weight: bold;
+  margin: 5px 8px 5px 0;
+}
+.btn-outline {
+  background: transparent;
+  border: 1px solid #ffffff80;
+}
+section { padding: 75px 22px; }
+.container { max-width: 1100px; margin: auto; }
+.section-title { text-align: center; margin-bottom: 40px; }
+.section-title small {
+  color: var(--teal);
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+.section-title h2 {
+  color: var(--navy);
+  font-size: 34px;
+  margin-top: 8px;
+}
+.about {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 45px;
+  align-items: center;
+}
+.about h2 { color: var(--navy); font-size: 32px; margin-bottom: 15px; }
+.about p { margin-bottom: 13px; color: #536275; }
+.about-card {
+  background: var(--light);
+  padding: 30px;
+  border-radius: 15px;
+  border-left: 5px solid var(--teal);
+}
+.about-card h3 { color: var(--navy); margin-bottom: 12px; }
+.about-card li { margin: 9px 0 9px 20px; }
+.services { background: var(--light); }
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 27px;
+  box-shadow: 0 5px 22px #10243e0c;
+  border: 1px solid #e8eef3;
+  transition: .2s;
+}
+.card:hover { transform: translateY(-5px); }
+.card .symbol {
+  font-size: 30px;
+  margin-bottom: 12px;
+}
+.card h3 { color: var(--navy); margin-bottom: 8px; }
+.card p { color: #647386; font-size: 14px; }
+.highlight {
+  background: var(--navy);
+  color: white;
+  text-align: center;
+}
+.highlight h2 { font-size: 32px; margin-bottom: 12px; }
+.highlight p { color: #d5e3ee; margin-bottom: 20px; }
+.contact-grid {
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  gap: 35px;
+}
+.contact-info {
+  background: var(--navy);
+  color: white;
+  border-radius: 14px;
+  padding: 30px;
+}
+.contact-info h3 { font-size: 24px; margin-bottom: 18px; }
+.contact-info p { margin: 15px 0; color: #e0eaf2; }
+.contact-info a { color: #78e4d7; }
+form {
+  background: var(--light);
+  padding: 28px;
+  border-radius: 14px;
+}
+input, textarea {
+  width: 100%;
+  padding: 14px;
+  margin: 8px 0 15px;
+  border: 1px solid #d6e0e8;
+  border-radius: 7px;
+  font: inherit;
+  background: white;
+}
+textarea { min-height: 110px; resize: vertical; }
+button {
+  border: 0;
+  cursor: pointer;
+  font: inherit;
+}
+footer {
+  background: #0b1b30;
+  color: #d5e1eb;
+  text-align: center;
+  padding: 25px 15px;
+  font-size: 14px;
+}
+@media(max-width: 750px) {
+  .navlinks { gap: 12px; font-size: 12px; }
+  .brand { font-size: 15px; }
+  .hero { padding: 75px 22px; }
+  .about, .contact-grid { grid-template-columns: 1fr; }
+  .cards { grid-template-columns: 1fr; }
+  section { padding: 55px 20px; }
+}
+</style>
+</head>
+<body>
+
+<header>
+<nav>
+  <a class="brand" href="#home">MER TARUN <span>ACCOUNTANT</span></a>
+  <div class="navlinks">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+</header>
+
+<main>
+<section class="hero" id="home">
+<div class="hero-inner">
+  <div class="tag">WELCOME TO MY PROFESSIONAL PORTFOLIO</div>
+  <h1>MER TARUN<br><span>ACCOUNTANT</span></h1>
+  <p>
+    Reliable Accounting & Taxation Support for Your Business.
+    Helping individuals and businesses manage their accounts
+    with accuracy, care and professionalism.
+  </p>
+  <a class="btn" href="#contact">Get In Touch</a>
+  <a class="btn btn-outline" href="#services">Explore Services</a>
+</div>
+</section>
+
+<section id="about">
+<div class="container about">
+<div>
+  <div class="tag">ABOUT ME</div>
+  <h2>Your Trusted Accounting Support</h2>
+  <p>
+    Hello! I am Tarun, an accounting professional with
+    experience in accounting and taxation work.
+  </p>
+  <p>
+    I have practical experience working with accounting
+    software and handling purchase, sales, bookkeeping
+    and GST-related tasks.
+  </p>
+  <p>
+    My focus is to provide accurate, organized and
+    dependable accounting support to businesses and individuals.
+  </p>
+  <a class="btn" href="#contact">Contact Me</a>
+</div>
+<div class="about-card">
+  <h3>Professional Skills</h3>
+  <ul>
+    <li>Purchase & Sales Accounting</li>
+    <li>GST Returns & Reconciliation</li>
+    <li>Bookkeeping & Data Entry</li>
+    <li>Tally & Accounting Software</li>
+    <li>Income Tax Return Assistance</li>
+    <li>Financial Record Management</li>
+  </ul>
+</div>
+</div>
+</section>
+
+<section class="services" id="services">
+<div class="container">
+<div class="section-title">
+  <small>WHAT I DO</small>
+  <h2>My Services</h2>
+  <p>Accounting solutions to support your business.</p>
+</div>
+<div class="cards">
+  <div class="card">
+    <div class="symbol">📊</div>
+    <h3>Accounting & Bookkeeping</h3>
+    <p>Daily accounting entries, ledger maintenance and organized financial records.</p>
+  </div>
+  <div class="card">
+    <div class="symbol">🧾</div>
+    <h3>GST Services</h3>
+    <p>GST return preparation assistance, data checking and GST reconciliation.</p>
+  </div>
+  <div class="card">
+    <div class="symbol">📁</div>
+    <h3>Purchase & Sales</h3>
+    <p>Purchase and sales invoice entries with proper record management.</p>
+  </div>
+  <div class="card">
+    <div class="symbol">💼</div>
+    <h3>Income Tax Assistance</h3>
+    <p>Assistance with income tax return documentation and related accounting work.</p>
+  </div>
+  <div class="card">
+    <div class="symbol">💻</div>
+    <h3>Accounting Software</h3>
+    <p>Practical accounting support using Tally, Miracle and Shree Sava.</p>
+  </div>
+  <div class="card">
+    <div class="symbol">🤝</div>
+    <h3>Freelance Accounting</h3>
+    <p>Flexible accounting assistance for small businesses and individuals.</p>
+  </div>
+</div>
+</div>
+</section>
+
+<section class="highlight">
+<div class="container">
+  <h2>Need Accounting Support?</h2>
+  <p>Let's connect and discuss how I can help your business.</p>
+  <a class="btn" href="#contact">Contact Me Today</a>
+</div>
+</section>
+
+<section id="contact">
+<div class="container">
+<div class="section-title">
+  <small>LET'S CONNECT</small>
+  <h2>Contact Me</h2>
+  <p>Send your enquiry and I will get back to you.</p>
+</div>
+<div class="contact-grid">
+<div class="contact-info">
+  <h3>Get In Touch</h3>
+  <p><strong>Name:</strong> Mer Tarun Accountant</p>
+  <p><strong>Location:</strong> Rajkot, Gujarat, India</p>
+  <p><strong>Phone:</strong><br><a href="tel:+917048840778">+91 70488 40778</a></p>
+  <p><strong>Email:</strong><br><a href="mailto:mertarun@gmail.com">mertarun@gmail.com</a></p>
+  <p>Available for freelance accounting enquiries.</p>
+</div>
+<form id="contactForm">
+  <label>Your Name</label>
+  <input id="name" type="text" placeholder="Enter your name" required>
+  <label>Mobile Number</label>
+  <input id="phone" type="tel" placeholder="Enter mobile number" required>
+  <label>How can I help you?</label>
+  <textarea id="message" placeholder="Write your enquiry..." required></textarea>
+  <button class="btn" type="submit">Send Enquiry on WhatsApp</button>
+</form>
+</div>
+</div>
+</section>
+</main>
+
+<footer>
+  <p>© <span id="year"></span> Mer Tarun Accountant. All Rights Reserved.</p>
+  <p>Professional Accounting & Taxation Support</p>
+</footer>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const name = document.getElementById("name").value.trim();
+  const phone = document.getElementById("phone").value.trim();
+  const message = document.getElementById("message").value.trim();
+
+  const text = `Hello Tarun, I want to enquire about your services.
+
+Name: ${name}
+Mobile: ${phone}
+Enquiry: ${message}`;
+
+  const whatsappNumber = "917048840778";
+  const url = "https://wa.me/" + whatsappNumber + "?text=" + encodeURIComponent(text);
+
+  window.open(url, "_blank");
+});
+</script>
+</body>
+                                                                        </html>
+                                                                        
